@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+        .card{
+            height: 350px;
+            width: 280px;
+            position: absolute;
+            background-color: #8dd2f052;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 5px 5px 15px #343232;
+            border-radius: 20px;
+            display: flex;align-items: center;justify-content: center;
+            flex-direction: column;
+        }
+        .btn-modal{
+            border:none;
+            padding: 5px;
+            background-color: #224a5c;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            width: 50px;
+            text-align: center;
+        }
+        .btn-modal:hover{
+            background-color: #082f41;
+        }
+        .modal-text{
+            font-weight: 600;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <p class="modal-text">message sent successfully</p>
+        <a href="/" class="btn-modal">close</a>
+    </div>
+    </div>
+</body>
+</html>

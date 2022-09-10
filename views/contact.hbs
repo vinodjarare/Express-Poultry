@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+  <title>Contact Us | Poultry Farming</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<script>
+  function phonenumber() {
+    let x = document.getElementById('inputMobile');
+    var phoneno = /^\d{10}$/;
+    if (x.value.match(phoneno)) {
+      return true;
+    }
+    else {
+      alert("this is not valid phone no.");
+      return false;
+    }
+  }
+</script>
+
+<body>
+  {{>navbar}}
+
+  <div class="breadcrum">
+    <h1 class="p-5 text-white">Contact Us</h1>
+    <h6 class="text-yellow ps-5"><strong><a class="text-yellow" href="/">Home</a> » Contact Us </strong> </h6>
+  </div>
+  <div class="container mt-5 mb-5">
+    <form class="row g-3 needs-validation" method="POST" action="/contact">
+      <div class="col-md-6">
+        <label for="first_name" class="form-label"> First Name</label>
+        <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+      </div>
+      <div class="col-md-6">
+        <label for="last_name" class="form-label"> Last Name</label>
+        <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+      </div>
+      <div class="col-12">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Enter Email" required>
+      </div>
+      <div class="col-12">
+        <label for="imobile" class="form-label">Mobile No</label>
+        <input type="tel" class="form-control" onchange="phonenumber()" id="inputMobile" name="mobile"
+          placeholder="9876543210" required>
+      </div>
+      <div class="col-md-12 form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="comment"
+          required></textarea>
+        <label for="comment">Comments</label>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-outline-dark" name="contact">Send</button>
+      </div>
+    </form>
+  </div>
+  {{>footer}}
+  <script src="../js/bootstrap.js"></script>
+</body>
+
+</html>
